@@ -55,6 +55,24 @@ private slots:
 
     void on_btnYZeroLineColor_clicked();
 
+    void on_btnSave_clicked();
+
+    void on_btnOpen_clicked();
+
+    void on_comboPointSize_currentTextChanged(const QString &arg1);
+
+    void on_btnPointColor_clicked();
+
+    void on_lineTime_textChanged(const QString &arg1);
+
+    void on_lineCount_textChanged(const QString &arg1);
+
+    void on_lineMin_textChanged(const QString &arg1);
+
+    void on_lineMax_textChanged(const QString &arg1);
+
+    void on_btnSavePlotAsPdf_clicked();
+
 private:
     Ui::MainWindow *ui;
     QCustomPlot *plot;
@@ -62,14 +80,14 @@ private:
     int min;
     int max;
     int millySec;
-    QVector<double> *xData;
-    QVector<double> *yData;
+    std::unique_ptr<QVector<double>> xData;
+    std::unique_ptr<QVector<double>> yData;
     bool isGenerating = false;
     QTimer *timer;
     QCPSelectionRect *zoomRect;
-    bool ctrlPressed = false;
 
     void generateRandomData();
     bool eventFilter(QObject *obj, QEvent *event);
+    void errorMessage(QString text);
 };
 #endif // MAINWINDOW_H

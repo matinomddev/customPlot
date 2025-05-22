@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -93,6 +94,13 @@ public:
     QHBoxLayout *horizontalLayout_14;
     QLabel *label_14;
     QPushButton *btnPenColor;
+    QHBoxLayout *horizontalLayout_21;
+    QLabel *label_21;
+    QComboBox *comboPointSize;
+    QPushButton *btnPointColor;
+    QPushButton *btnSavePlotAsPdf;
+    QPushButton *btnSave;
+    QPushButton *btnOpen;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -100,7 +108,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1243, 943);
+        MainWindow->resize(1255, 1157);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         horizontalLayout_2 = new QHBoxLayout(centralwidget);
@@ -162,6 +170,7 @@ public:
 
         lineTime = new QLineEdit(centralwidget);
         lineTime->setObjectName("lineTime");
+        lineTime->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout->addWidget(lineTime);
 
@@ -433,15 +442,66 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_14);
 
+        horizontalLayout_21 = new QHBoxLayout();
+        horizontalLayout_21->setObjectName("horizontalLayout_21");
+        label_21 = new QLabel(centralwidget);
+        label_21->setObjectName("label_21");
+
+        horizontalLayout_21->addWidget(label_21);
+
+        comboPointSize = new QComboBox(centralwidget);
+        comboPointSize->addItem(QString());
+        comboPointSize->addItem(QString());
+        comboPointSize->addItem(QString());
+        comboPointSize->addItem(QString());
+        comboPointSize->addItem(QString());
+        comboPointSize->addItem(QString());
+        comboPointSize->addItem(QString());
+        comboPointSize->addItem(QString());
+        comboPointSize->addItem(QString());
+        comboPointSize->addItem(QString());
+        comboPointSize->addItem(QString());
+        comboPointSize->setObjectName("comboPointSize");
+
+        horizontalLayout_21->addWidget(comboPointSize);
+
+        btnPointColor = new QPushButton(centralwidget);
+        btnPointColor->setObjectName("btnPointColor");
+
+        horizontalLayout_21->addWidget(btnPointColor);
+
+
+        verticalLayout->addLayout(horizontalLayout_21);
+
+        btnSavePlotAsPdf = new QPushButton(centralwidget);
+        btnSavePlotAsPdf->setObjectName("btnSavePlotAsPdf");
+        btnSavePlotAsPdf->setStyleSheet(QString::fromUtf8("font: 700 14pt \"Segoe UI\";\n"
+"padding: 20px;"));
+
+        verticalLayout->addWidget(btnSavePlotAsPdf);
+
+        btnSave = new QPushButton(centralwidget);
+        btnSave->setObjectName("btnSave");
+        btnSave->setStyleSheet(QString::fromUtf8("font: 700 14pt \"Segoe UI\";\n"
+"padding: 20px;"));
+
+        verticalLayout->addWidget(btnSave);
+
+        btnOpen = new QPushButton(centralwidget);
+        btnOpen->setObjectName("btnOpen");
+        btnOpen->setStyleSheet(QString::fromUtf8("font: 700 14pt \"Segoe UI\";\n"
+"padding: 20px;"));
+
+        verticalLayout->addWidget(btnOpen);
+
 
         horizontalLayout_2->addLayout(verticalLayout);
 
         horizontalLayout_2->setStretch(0, 3);
-        horizontalLayout_2->setStretch(1, 1);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1243, 21));
+        menubar->setGeometry(QRect(0, 0, 1255, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -497,6 +557,23 @@ public:
         btnBgImage->setText(QCoreApplication::translate("MainWindow", "Image", nullptr));
         label_14->setText(QCoreApplication::translate("MainWindow", "Pen Color :", nullptr));
         btnPenColor->setText(QCoreApplication::translate("MainWindow", "Select Color", nullptr));
+        label_21->setText(QCoreApplication::translate("MainWindow", "Point Size and Color:", nullptr));
+        comboPointSize->setItemText(0, QCoreApplication::translate("MainWindow", "0", nullptr));
+        comboPointSize->setItemText(1, QCoreApplication::translate("MainWindow", "1", nullptr));
+        comboPointSize->setItemText(2, QCoreApplication::translate("MainWindow", "2", nullptr));
+        comboPointSize->setItemText(3, QCoreApplication::translate("MainWindow", "3", nullptr));
+        comboPointSize->setItemText(4, QCoreApplication::translate("MainWindow", "4", nullptr));
+        comboPointSize->setItemText(5, QCoreApplication::translate("MainWindow", "5", nullptr));
+        comboPointSize->setItemText(6, QCoreApplication::translate("MainWindow", "6", nullptr));
+        comboPointSize->setItemText(7, QCoreApplication::translate("MainWindow", "7", nullptr));
+        comboPointSize->setItemText(8, QCoreApplication::translate("MainWindow", "8", nullptr));
+        comboPointSize->setItemText(9, QCoreApplication::translate("MainWindow", "9", nullptr));
+        comboPointSize->setItemText(10, QCoreApplication::translate("MainWindow", "10", nullptr));
+
+        btnPointColor->setText(QCoreApplication::translate("MainWindow", "Color", nullptr));
+        btnSavePlotAsPdf->setText(QCoreApplication::translate("MainWindow", "Save Plot As PDF", nullptr));
+        btnSave->setText(QCoreApplication::translate("MainWindow", "Save Data", nullptr));
+        btnOpen->setText(QCoreApplication::translate("MainWindow", "Open File Data", nullptr));
     } // retranslateUi
 
 };

@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1243</width>
-    <height>943</height>
+    <width>1255</width>
+    <height>1157</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,1">
+   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,0">
     <item>
      <layout class="QHBoxLayout" name="layoutPlot"/>
     </item>
@@ -95,6 +95,9 @@ background-color: red;</string>
         </item>
         <item>
          <widget class="QLineEdit" name="lineTime">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
           <property name="text">
            <string>100</string>
           </property>
@@ -422,6 +425,116 @@ background-color: red;</string>
         </item>
        </layout>
       </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_21">
+        <item>
+         <widget class="QLabel" name="label_21">
+          <property name="text">
+           <string>Point Size and Color:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboPointSize">
+          <item>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>5</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>6</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>7</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>8</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>9</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>10</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnPointColor">
+          <property name="text">
+           <string>Color</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSavePlotAsPdf">
+        <property name="styleSheet">
+         <string notr="true">font: 700 14pt &quot;Segoe UI&quot;;
+padding: 20px;</string>
+        </property>
+        <property name="text">
+         <string>Save Plot As PDF</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSave">
+        <property name="styleSheet">
+         <string notr="true">font: 700 14pt &quot;Segoe UI&quot;;
+padding: 20px;</string>
+        </property>
+        <property name="text">
+         <string>Save Data</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnOpen">
+        <property name="styleSheet">
+         <string notr="true">font: 700 14pt &quot;Segoe UI&quot;;
+padding: 20px;</string>
+        </property>
+        <property name="text">
+         <string>Open File Data</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
    </layout>
@@ -431,7 +544,7 @@ background-color: red;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1243</width>
+     <width>1255</width>
      <height>21</height>
     </rect>
    </property>

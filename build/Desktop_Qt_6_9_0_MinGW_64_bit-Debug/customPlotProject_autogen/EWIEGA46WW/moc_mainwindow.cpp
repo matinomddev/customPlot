@@ -57,7 +57,17 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "on_btnXGridColor_clicked",
         "on_btnYGridColor_clicked",
         "on_btnXZeroLineColor_clicked",
-        "on_btnYZeroLineColor_clicked"
+        "on_btnYZeroLineColor_clicked",
+        "on_btnSave_clicked",
+        "on_btnOpen_clicked",
+        "on_comboPointSize_currentTextChanged",
+        "arg1",
+        "on_btnPointColor_clicked",
+        "on_lineTime_textChanged",
+        "on_lineCount_textChanged",
+        "on_lineMin_textChanged",
+        "on_lineMax_textChanged",
+        "on_btnSavePlotAsPdf_clicked"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -93,6 +103,34 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void()>(16, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_btnYZeroLineColor_clicked'
         QtMocHelpers::SlotData<void()>(17, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_btnSave_clicked'
+        QtMocHelpers::SlotData<void()>(18, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_btnOpen_clicked'
+        QtMocHelpers::SlotData<void()>(19, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_comboPointSize_currentTextChanged'
+        QtMocHelpers::SlotData<void(const QString &)>(20, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 21 },
+        }}),
+        // Slot 'on_btnPointColor_clicked'
+        QtMocHelpers::SlotData<void()>(22, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_lineTime_textChanged'
+        QtMocHelpers::SlotData<void(const QString &)>(23, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 21 },
+        }}),
+        // Slot 'on_lineCount_textChanged'
+        QtMocHelpers::SlotData<void(const QString &)>(24, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 21 },
+        }}),
+        // Slot 'on_lineMin_textChanged'
+        QtMocHelpers::SlotData<void(const QString &)>(25, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 21 },
+        }}),
+        // Slot 'on_lineMax_textChanged'
+        QtMocHelpers::SlotData<void(const QString &)>(26, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::QString, 21 },
+        }}),
+        // Slot 'on_btnSavePlotAsPdf_clicked'
+        QtMocHelpers::SlotData<void()>(27, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -132,10 +170,18 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 13: _t->on_btnYGridColor_clicked(); break;
         case 14: _t->on_btnXZeroLineColor_clicked(); break;
         case 15: _t->on_btnYZeroLineColor_clicked(); break;
+        case 16: _t->on_btnSave_clicked(); break;
+        case 17: _t->on_btnOpen_clicked(); break;
+        case 18: _t->on_comboPointSize_currentTextChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 19: _t->on_btnPointColor_clicked(); break;
+        case 20: _t->on_lineTime_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 21: _t->on_lineCount_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 22: _t->on_lineMin_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 23: _t->on_lineMax_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 24: _t->on_btnSavePlotAsPdf_clicked(); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *MainWindow::metaObject() const
@@ -157,14 +203,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 16)
+        if (_id < 25)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 25;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 16)
+        if (_id < 25)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 16;
+        _id -= 25;
     }
     return _id;
 }
